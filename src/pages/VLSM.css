@@ -1,4 +1,4 @@
-.vlsm-description {
+.vlsm-config {
   background: #f8fafc;
   border-radius: 12px;
   padding: 1.5rem;
@@ -6,29 +6,173 @@
   border: 1px solid #e2e8f0;
 }
 
-.vlsm-description h3 {
+.vlsm-config h3 {
   color: #1a1a2e;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.config-section {
+  margin-bottom: 2rem;
+}
+
+.config-section h4 {
+  color: #2563eb;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Routeurs */
+.router-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.router-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.router-input {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  width: 80px;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+/* LAN Requirements */
+.lan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.lan-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.lan-select, .wan-select {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  width: 80px;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.interface-input {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  width: 80px;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.hosts-input {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  width: 100px;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.hosts-input-small {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  width: 60px;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.hosts-label {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* WAN Links */
+.wan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.wan-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.wan-separator {
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Buttons */
+.add-btn {
+  padding: 0.5rem 1rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background: #059669;
+}
+
+.remove-btn {
+  padding: 0.25rem 0.5rem;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.2s;
+}
+
+.remove-btn:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+.remove-btn:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Topology Summary */
+.topology-summary {
+  background: #e0e7ff;
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.topology-summary h3 {
+  color: #1d4ed8;
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-.vlsm-description h4 {
-  color: #2563eb;
-  margin-top: 1.5rem;
+.topology-summary p {
+  color: #1e40af;
   margin-bottom: 0.5rem;
-}
-
-.vlsm-description ul {
-  margin: 0.5rem 0;
-  padding-left: 1.5rem;
-}
-
-.vlsm-description li {
-  color: #475569;
-  margin-bottom: 0.25rem;
   font-family: 'Consolas', 'Monaco', monospace;
 }
 
+/* Tables */
 .vlsm-tables {
   margin-top: 2rem;
 }
@@ -111,6 +255,79 @@
   margin-bottom: 0.5rem;
 }
 
+/* Base Network */
+.base-network {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.base-network-input {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  width: 150px;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.base-network-label {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* Calculation Summary */
+.calculation-summary {
+  background: #f0f9ff;
+  border: 1px solid #0ea5e9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.calculation-summary h3 {
+  color: #0369a1;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e0f2fe;
+}
+
+.summary-label {
+  color: #0369a1;
+  font-weight: 500;
+}
+
+.summary-value {
+  color: #1e40af;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .lan-item, .wan-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .router-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* Print styles */
 @media print {
   .calculator-header,
@@ -129,6 +346,11 @@
     margin-bottom: 2rem;
   }
   
+  .topology-summary {
+    page-break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+  
   .vlsm-table {
     font-size: 0.8rem;
   }
@@ -136,5 +358,27 @@
   .vlsm-table th,
   .vlsm-table td {
     padding: 0.5rem 0.25rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lan-item, .wan-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .router-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .base-network {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .summary-grid {
+    grid-template-columns: 1fr;
   }
 }
