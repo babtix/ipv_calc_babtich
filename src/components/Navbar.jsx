@@ -20,6 +20,9 @@ function Navbar() {
         <NavLink to="/ipv6-calculator" className={({ isActive }) => isActive ? 'active' : ''}>
           IPv6
         </NavLink>
+        <NavLink to="/vlsm-calculator" className={({ isActive }) => isActive ? 'active' : ''}>
+          VLSM
+        </NavLink>
       </div>
     </nav>
   );

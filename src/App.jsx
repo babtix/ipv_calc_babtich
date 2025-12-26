@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import SubnetCalculator from './pages/SubnetCalculator';
 import CIDRCalculator from './pages/CIDRCalculator';
 import IPv6Calculator from './pages/IPv6Calculator';
+import VLSMCalculator from './pages/VLSMCalculator';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/subnet-calculator" element={<SubnetCalculator />} />
             <Route path="/cidr-calculator" element={<CIDRCalculator />} />
             <Route path="/ipv6-calculator" element={<IPv6Calculator />} />
+            <Route path="/vlsm-calculator" element={<VLSMCalculator />} />
           </Routes>
         </main>
       </div>

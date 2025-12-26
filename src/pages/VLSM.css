@@ -1,0 +1,140 @@
+.vlsm-description {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.vlsm-description h3 {
+  color: #1a1a2e;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.vlsm-description h4 {
+  color: #2563eb;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.vlsm-description ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.vlsm-description li {
+  color: #475569;
+  margin-bottom: 0.25rem;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.vlsm-tables {
+  margin-top: 2rem;
+}
+
+.table-section {
+  margin-bottom: 3rem;
+}
+
+.table-section h3 {
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #2563eb;
+}
+
+.table-container {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.vlsm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.vlsm-table th {
+  background: #2563eb;
+  color: white;
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  font-weight: 600;
+  border: 1px solid #1d4ed8;
+}
+
+.vlsm-table td {
+  padding: 0.75rem 0.5rem;
+  border: 1px solid #e2e8f0;
+  min-height: 2rem;
+}
+
+.vlsm-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.vlsm-table tbody tr:hover {
+  background: #e0e7ff;
+}
+
+.vlsm-table td:first-child {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-weight: 500;
+  color: #1a1a2e;
+}
+
+.vlsm-table td:nth-child(2) {
+  font-family: 'Consolas', 'Monaco', monospace;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.print-instructions {
+  background: #ecfdf5;
+  border: 1px solid #10b981;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.print-instructions h3 {
+  color: #059669;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.print-instructions p {
+  color: #047857;
+  margin-bottom: 0.5rem;
+}
+
+/* Print styles */
+@media print {
+  .calculator-header,
+  .input-section,
+  .footer,
+  .print-instructions {
+    display: none;
+  }
+  
+  .vlsm-tables {
+    margin-top: 0;
+  }
+  
+  .table-section {
+    page-break-inside: avoid;
+    margin-bottom: 2rem;
+  }
+  
+  .vlsm-table {
+    font-size: 0.8rem;
+  }
+  
+  .vlsm-table th,
+  .vlsm-table td {
+    padding: 0.5rem 0.25rem;
+  }
+}

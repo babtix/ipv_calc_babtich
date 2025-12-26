@@ -48,13 +48,27 @@ function Home() {
           </ul>
           <span className="card-link">Commencer</span>
         </Link>
+
+        <Link to="/vlsm-calculator" className="card">
+          <div className="card-icon"></div>
+          <h2>Tableaux VLSM</h2>
+          <p>Générer des tableaux de planification VLSM vides pour laboratoires Cisco</p>
+          <ul>
+            <li>Planification VLSM</li>
+            <li>Sous-réseaux LAN</li>
+            <li>Liens WAN</li>
+            <li>Prêt à imprimer</li>
+          </ul>
+          <span className="card-link">Commencer</span>
+        </Link>
       </div>
 
       <div className="info-section">
         <h2>Comment ça marche</h2>
         <p>
           Ce calculateur vous montre le processus complet étape par étape pour le sous-réseautage IPv4 et IPv6.
-          Chaque calcul est décomposé en étapes individuelles avec des explications détaillées.
+          Chaque calcul est décomposé en étapes individuelles avec des explications détaillées. Inclut également
+          des outils pour générer des tableaux VLSM vides pour vos laboratoires.
         </p>
         <div className="features">
           <div className="feature">
@@ -64,7 +78,7 @@ function Home() {
             <span>✓</span> IPv4 et IPv6
           </div>
           <div className="feature">
-            <span>✓</span> Étape par étape
+            <span>✓</span> Tableaux VLSM
           </div>
         </div>
       </div>
