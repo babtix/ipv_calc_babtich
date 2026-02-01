@@ -11,12 +11,12 @@
 
 .calculator-header h1 {
   font-size: 2rem;
-  color: #1a1a2e;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
 .calculator-header p {
-  color: #64748b;
+  color: var(--text-secondary);
 }
 
 .input-section {
@@ -112,11 +112,11 @@
 }
 
 .error-message {
-  background: #fef2f2;
-  border: 1px solid #fecaca;
+  background: var(--error-light);
+  border: 1px solid var(--error-color);
   border-radius: 8px;
   padding: 1rem;
-  color: #dc2626;
+  color: var(--error-color);
   margin-top: 1rem;
   text-align: center;
 }
@@ -133,11 +133,14 @@
   font-size: 0.9rem;
   margin: 0;
 }
+@import '../styles/themes.css';
+
 /* New styles for network tools */
 .calculator {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
+  background-color: var(--bg-secondary);
 }
 
 .calculate-button {

@@ -1,6 +1,9 @@
+@import './styles/themes.css';
+
 .app {
   min-height: 100vh;
-  background: #f5f7fa;
+  background: var(--bg-secondary);
+  transition: background-color 0.3s ease;
 }
 
 main {

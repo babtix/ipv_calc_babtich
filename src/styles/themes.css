@@ -76,14 +76,22 @@
   --focus-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
-/* Apply theme colors to body */
+/* Apply theme colors globally */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+html {
+  background-color: var(--bg-secondary);
+}
+
 body {
   background-color: var(--bg-secondary);
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Update existing components to use CSS variables */
+/* Apply theme colors to common elements */
 .app {
   background-color: var(--bg-secondary);
   min-height: 100vh;
@@ -92,14 +100,26 @@ body {
 
 /* Card components */
 .card {
-  background: var(--bg-primary);
-  border: 1px solid var(--border-color);
-  color: var(--text-primary);
+  background: var(--bg-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
 }
 
 .card:hover {
-  border-color: var(--primary-color);
-  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.card h3 {
+  color: var(--text-primary) !important;
+}
+
+.card p {
+  color: var(--text-secondary) !important;
+}
+
+.card-link {
+  color: var(--primary-color) !important;
 }
 
 /* Input components */
@@ -109,6 +129,10 @@ input, select, textarea {
   color: var(--text-primary) !important;
 }
 
+input::placeholder {
+  color: var(--text-tertiary) !important;
+}
+
 input:focus, select:focus, textarea:focus {
   border-color: var(--primary-color) !important;
   box-shadow: var(--focus-shadow) !important;
@@ -116,59 +140,57 @@ input:focus, select:focus, textarea:focus {
 
 /* Button components */
 .calculate-button {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%) !important;
+  color: white !important;
 }
 
 .secondary-button {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  color: var(--text-secondary);
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-secondary) !important;
 }
 
 .secondary-button:hover {
-  background: var(--bg-tertiary);
+  background: var(--bg-tertiary) !important;
 }
 
 /* Result components */
 .result-card, .calculator, .input-section {
-  background: var(--bg-primary);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-md);
+  background: var(--bg-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.result-card h3 {
+  color: var(--text-primary) !important;
+}
+
+.result-item .label {
+  color: var(--text-secondary) !important;
+}
+
+.result-item .value {
+  color: var(--text-primary) !important;
 }
 
 /* Status colors */
-.success { color: var(--success-color); }
-.warning { color: var(--warning-color); }
-.error { color: var(--error-color); }
+.success { color: var(--success-color) !important; }
+.warning { color: var(--warning-color) !important; }
+.error { color: var(--error-color) !important; }
 
-.success-light { background: var(--success-light); }
-.warning-light { background: var(--warning-light); }
-.error-light { background: var(--error-light); }
-
-/* Navbar theme support */
-.navbar {
-  background: var(--bg-primary);
-  border-bottom: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
-}
-
-.nav-links a {
-  color: var(--text-secondary);
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--primary-color);
-}
+.success-light { background: var(--success-light) !important; }
+.warning-light { background: var(--warning-light) !important; }
+.error-light { background: var(--error-light) !important; }
 
 /* Table components */
 .table-header {
-  background: var(--bg-secondary);
-  color: var(--text-secondary);
+  background: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
 }
 
 .table-row {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
 }
 
 /* Modal components */
@@ -180,9 +202,56 @@ input:focus, select:focus, textarea:focus {
   background: rgba(0, 0, 0, 0.8);
 }
 
-/* Smooth transitions for theme changes */
-* {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+.history-modal {
+  background: var(--bg-primary) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Home page specific */
+.home {
+  background-color: var(--bg-secondary);
+}
+
+.hero h1 {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--success-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  color: var(--text-secondary) !important;
+}
+
+.section-title {
+  color: var(--text-primary) !important;
+  border-bottom: 2px solid var(--primary-color) !important;
+}
+
+.info-section {
+  background: var(--bg-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.info-section h2 {
+  color: var(--text-primary) !important;
+}
+
+.info-section p {
+  color: var(--text-secondary) !important;
+}
+
+.feature {
+  color: var(--success-color) !important;
+}
+
+.footer {
+  border-top: 1px solid var(--border-color) !important;
+}
+
+.footer p {
+  color: var(--text-tertiary) !important;
 }
 
 /* Scrollbar theming */
